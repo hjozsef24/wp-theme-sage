@@ -1,0 +1,8 @@
+# Local dependencies, generated assets, and environment files
+node_modules/
+vendor/
+public/
+.env
+.env.*
+
+*.log

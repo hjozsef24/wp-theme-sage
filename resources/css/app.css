@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+@source "../views/";
+@source "../../app/";
+
+@theme {
+    --font-dm: "DM Sans", sans-serif;
+    --font-poppins: "Poppins", sans-serif;
+}
+
+@layer base {
+    body {
+        @apply font-poppins;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-dm !font-medium !mb-4 !mt-0;
+
+        &:last-child {
+            @apply !mb-0;
+        }
+    }
+
+    h1 {
+        @apply !text-5xl lg:!text-6xl;
+    }
+
+    h2 {
+        @apply !text-4xl lg:!text-5xl;
+    }
+
+    h3 {
+        @apply !text-3xl lg:!text-4xl;
+    }
+
+    h4 {
+        @apply !text-2xl lg:!text-3xl;
+    }
+
+    h5 {
+        @apply !text-xl lg:!text-2xl;
+    }
+
+    h6 {
+        @apply !text-lg lg:!text-xl;
+    }
+
+    p {
+        @apply !mb-6 !mt-0;
+
+        &:last-child {
+            @apply !mb-0;
+        }
+    }
+
+    main {
+        &>* {
+            &:last-child {
+                @apply !mb-0;
+            }
+        }
+    }
+}
+
+.container {
+    @apply w-full mx-auto px-8;
+    max-width: 1108px;
+}
+
+.container.longer {
+    max-width: 1440px;
+}
+
+.container.wider {
+    max-width: 1632px;
+}
